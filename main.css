@@ -24,4 +24,17 @@
    		width:10px;
    		height:10px;
    	}
-    .nav, .pagination, .carousel, .panel-title a { cursor: pointer; }
+.nav, .pagination, .carousel, .panel-title a { cursor: pointer; }
+
+nav{
+    background-color:pink;
+    color:purple;
+}
+header{
+    background-color:teal;
+    color: white;
+}
+.bs-docs-header{
+    background-color:blue;
+    color:white;
+}
