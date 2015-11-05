@@ -2,6 +2,7 @@ var chartsExample = angular.module('chartsExample', []);
 
 chartsExample.controller('chartsCtrl', function ($scope) {
 //some sample data
+console.log("controller js firing");
 	var hiData={
 		 chart: {
             type: 'bar'
@@ -64,16 +65,8 @@ var randomScalingFactor = function() {
   	
   	
   	drawCThree:function(){
-  		var ctx1 = document.getElementById("chart1").getContext("2d");
-        window.myLine = new Chart(ctx1).Line(lineChartData, {
-            showScale: false,
-            pointDot: true,
-            responsive: true
-        });
-        var ctx2 = document.getElementById("chart2").getContext("2d");
-        window.myLine = new Chart(ctx2).Line(lineChartData, {
-            responsive: true
-        });
+
+  		
         var chart = c3.generate({
             bindto: '#chart',
             data: {
@@ -96,6 +89,16 @@ var randomScalingFactor = function() {
   },
   chartJs: {
   	drawChartJs:function(){
+  		var ctx1 = document.getElementById("chart1").getContext("2d");
+        window.myLine = new Chart(ctx1).Line(lineChartData, {
+            showScale: false,
+            pointDot: true,
+            responsive: true
+        });
+        var ctx2 = document.getElementById("chart2").getContext("2d");
+        window.myLine = new Chart(ctx2).Line(lineChartData, {
+            responsive: true
+        });
   		Chart.defaults.global.pointHitDetectionRadius = 1;
     Chart.defaults.global.customTooltips = function(tooltip) {
         var tooltipEl = $('#chartjs-tooltip');
